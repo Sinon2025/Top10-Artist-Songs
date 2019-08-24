@@ -10,11 +10,33 @@
   
 body {
     height: 100vh;
-    background-color: rgb(254, 162, 212);
-    background-image: url(../images/background.jpg);
+    /* background-color: rgb(255, 197, 229); */
+    /* background-image: url(../images/background.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background: linear-gradient(270deg, #a2ffe7, #b5ffa2, #fff7a2, #a2c2ff, #d0a2ff, #ffa2f9, #ffa2ab, #ffbaa2, #ffbaa2);
+    background-size: 1800% 1800%;
+    
+    -webkit-animation: AnimationName 19s ease infinite;
+    -moz-animation: AnimationName 19s ease infinite;
+    animation: AnimationName 19s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 header {
@@ -28,7 +50,7 @@ h1 {
     letter-spacing: 1px;
     font-size: 30px;
     margin: auto;
-    color: #b1ffbe;
+    color: #ffffff;
     text-transform: uppercase;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
     display: flex;
@@ -91,7 +113,7 @@ form.artist-search input[type=text] {
     font-size: 30px;
     margin: auto;
     text-transform: uppercase;
-    color: rgb(170, 253, 239);
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
 }
 
@@ -103,14 +125,14 @@ form.artist-search input[type=text] {
     border-radius: 10px;
     width: 50%;
     height: 10%;
-    background-color: #ffa0a0;
+    background-color: #2b2b2b;
     font-family: 'Roboto', sans-serif;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
 }
 
 .index {
     font-size: 20px;
-    color: rgb(114, 250, 121);
+    color: rgb(253, 103, 128);
     align-self: center;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
 }
@@ -136,7 +158,7 @@ form.artist-search input[type=text] {
 }
 
 img{
-    margin: 1vh auto;
+    margin: 2vh auto;
     width: 40%;
     border-radius: 10px;
     border: 4px solid rgba(0, 0, 0, 0.158);
@@ -150,6 +172,6 @@ footer{
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
-    background-color: #ffa0a056;
+    background-color: #ffffff33;
     color: rgb(110, 110, 110);
 }

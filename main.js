@@ -1,7 +1,10 @@
 
 const takeInfo=(artistInfo)=>{
+  
     const artistName = artistInfo[0]["result"]["primary_artist"]["name"];
 
+    console.log(artistInfo);
+  
     const fullTitle = artistInfo.map(title => title["result"]["full_title"])
     
     const artistImageUrl = artistInfo[0]["result"]["primary_artist"]["image_url"];
@@ -15,6 +18,7 @@ const takeInfo=(artistInfo)=>{
         "textSongUrl": textSongUrl,
     }
 }
+
 
 const addArtistName=(date)=>{
      const h2Artist = document.createElement("h2")
@@ -110,6 +114,8 @@ const artistRequest=(aritstName="Sarius")=>{
             const artist=takeInfo(response)
             addSongs(artist);
         }).catch(err => {
+        ).then(response => console.log(takeInfo(response))
+        ).catch(err => {
             console.log(err);
         });
 };
@@ -117,4 +123,8 @@ const artistRequest=(aritstName="Sarius")=>{
 const main=()=>{
     searchArtist()
 }
+    console.log(0)
+    const dateArtis=artistRequest();
+}
+
 main()
