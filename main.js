@@ -94,9 +94,6 @@ const searchArtist=()=>{
   
 }
 
-const 
-
-
 const artistRequest=(aritstName="Sarius")=>{
     const link = "https://genius.p.rapidapi.com/search?q=";
     const url = link + aritstName;
