@@ -2,8 +2,6 @@
 const takeInfo=(artistInfo)=>{
   
     const artistName = artistInfo[0]["result"]["primary_artist"]["name"];
-
-    console.log(artistInfo);
   
     const fullTitle = artistInfo.map(title => title["result"]["full_title"])
     
@@ -114,16 +112,12 @@ const artistRequest=(aritstName="Sarius")=>{
             
             addSongs(artist);
         }).catch(err => {
-        ).then(response => console.log(takeInfo(response))
-        ).catch(err => {
-            console.log(err);
+           console.log(err);
         });
 };
 
 const main=()=>{
     searchArtist()
-}
-    console.log(0)
     const dateArtis=artistRequest();
 }
 
