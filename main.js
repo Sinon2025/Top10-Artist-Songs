@@ -31,11 +31,17 @@ const addArtistImage=(date)=>{
     const imageArtist = document.createElement("img");
     imageArtist.id = "artist_photo";
     imageArtist.src = date["artistImageUrl"];
-    
     return imageArtist
-
 };
-
+const changeSection = () => {
+    const sect = document.querySelector(".result-box");
+    sect.parentNode.removeChild(sect);
+     const creatSect = document.createElement("section");
+     const body = document.querySelector("body");
+     const footer= body.querySelector("footer");
+     creatSect.className = "result-box";
+    body.insertBefore(creatSect, footer);
+}
 
 const addSongs=(date)=>{
    console.log(date["fullTitle"]);
@@ -67,8 +73,6 @@ const addSongs=(date)=>{
         
         return aUrl
     });
-
-
     section[0].appendChild(addArtistName(date["name"]));
     section[0].appendChild(addArtistImage(date));
 
@@ -80,8 +84,6 @@ const addSongs=(date)=>{
         divSong.appendChild(allPlyrics[i]);
         section[0].appendChild(divSong)   
     }
-    
-
 };
 
 const searchArtist=()=>{
@@ -89,15 +91,12 @@ const searchArtist=()=>{
      const input = document.querySelector(".artist_srch");
     const search = (event) => {
         event.preventDefault()
+        changeSection();
         const inputValue = input.value;
-        artistRequest(inputValue);
-        
+        artistRequest(inputValue);     
     };
-
-    searchbtn.addEventListener('click', search);
-  
+    searchbtn.addEventListener('click', search); 
 }
-
 const artistRequest=(aritstName="Sarius")=>{
     const link = "https://genius.p.rapidapi.com/search?q=";
     const url = link + aritstName;
@@ -111,7 +110,8 @@ const artistRequest=(aritstName="Sarius")=>{
         .then(response => response.json()
         ).then(response => response["response"]["hits"]
         ).then(response => {
-            const artist=takeInfo(response)
+            const artist=takeInfo(response);
+            
             addSongs(artist);
         }).catch(err => {
         ).then(response => console.log(takeInfo(response))
