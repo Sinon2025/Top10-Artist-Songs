@@ -78,10 +78,9 @@ const addSongs=(date)=>{
         divSong.appendChild(allPindex[i]);
         divSong.appendChild(allPtitle[i]);
         divSong.appendChild(allPlyrics[i]);
-         section[0].appendChild(divSong)   
+        section[0].appendChild(divSong)   
     }
-    section[0].appendChild(addArtistName(date["name"]));
-    section[0].appendChild(addArtistImage(date));
+    
 
 };
 
@@ -98,9 +97,6 @@ const searchArtist=()=>{
     searchbtn.addEventListener('click', search);
   
 }
-
-
-
 
 const artistRequest=(aritstName="Sarius")=>{
     const link = "https://genius.p.rapidapi.com/search?q=";
