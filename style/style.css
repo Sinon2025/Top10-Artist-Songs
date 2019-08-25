@@ -10,22 +10,22 @@
   
 body {
     height: 100vh;
-     background-color: rgb(255, 197, 229);
-    background-image: url(../images/background6.jpg);
-    background-repeat: no-repeat;
+    /*background-color: rgb(255, 197, 229);
+    background-image: url(../images/background6.jpg); */
+    background-repeat: no-repeat; 
     background-size: cover;
     background-attachment: fixed;
     /* background: rgb(34,95,195);
     background: linear-gradient(0deg, rgba(34,95,195,1) 0%, rgba(253,45,177,1) 100%); */
-    /* background: linear-gradient(270deg, #a2ffe7, #b5ffa2, #fff7a2, #a2c2ff, #d0a2ff, #ffa2f9, #ffa2ab, #ffbaa2, #ffbaa2);
+     background: linear-gradient(270deg, #a2ffe7, #b5ffa2, #fff7a2, #a2c2ff, #d0a2ff, #ffa2f9, #ffa2ab, #ffbaa2, #ffbaa2);
     background-size: 1800% 1800%;
     
     -webkit-animation: AnimationName 19s ease infinite;
     -moz-animation: AnimationName 19s ease infinite;
-    animation: AnimationName 19s ease infinite; */
+    animation: AnimationName 19s ease infinite;
 }
 
-/* @-webkit-keyframes AnimationName {
+ @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -39,7 +39,7 @@ body {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-} */
+} 
 
 header {
     margin-top: 5vh;
