@@ -1,35 +1,26 @@
-
 const takeInfo=(artistInfo)=>{
-  
     const artistName = artistInfo[0]["result"]["primary_artist"]["name"];
-  
-    const fullTitle = artistInfo.map(title => title["result"]["full_title"])
-    
+    const fullTitle = artistInfo.map(title => title["result"]["full_title"]);
     const artistImageUrl = artistInfo[0]["result"]["primary_artist"]["image_url"];
-
     const textSongUrl = artistInfo.map(textUrl => textUrl["result"]["url"]);
-
     return {
         "name": artistName,
         "fullTitle": fullTitle,
         "artistImageUrl": artistImageUrl,
         "textSongUrl": textSongUrl,
-    }
-}
-
-
+    };
+};
 const addArtistName=(date)=>{
-     const h2Artist = document.createElement("h2")
+     const h2Artist = document.createElement("h2");
      const artistNode = document.createTextNode(date);
      h2Artist.appendChild(artistNode);
-     return h2Artist
-}
-
+     return h2Artist;
+};
 const addArtistImage=(date)=>{
     const imageArtist = document.createElement("img");
     imageArtist.id = "artist_photo";
     imageArtist.src = date["artistImageUrl"];
-    return imageArtist
+    return imageArtist;
 };
 const changeSection = () => {
     const sect = document.querySelector(".result-box");
@@ -39,11 +30,10 @@ const changeSection = () => {
      const footer= body.querySelector("footer");
      creatSect.className = "result-box";
     body.insertBefore(creatSect, footer);
-}
-
+};
 const addSongs=(date)=>{
    console.log(date["fullTitle"]);
-    const section=document.getElementsByClassName("result-box")
+    const section=document.getElementsByClassName("result-box");
     const allPindex=[];
     for (index in date["fullTitle"]){
         const pIndex=document.createElement('p');
@@ -51,24 +41,21 @@ const addSongs=(date)=>{
         const nodeP = document.createTextNode(parseInt(index) + 1);
         pIndex.appendChild(nodeP);
         allPindex.push(pIndex);
-        // console.log(pIndex);
-    }
+    };
     const allPtitle = date["fullTitle"].map(title=>{
         const pIndex = document.createElement('p');
         pIndex.className = "title";
         const nodeP = document.createTextNode(title);
         pIndex.appendChild(nodeP);
         return pIndex;
-        
     });
-
     const allPlyrics = date["textSongUrl"].map(lyrics => {
         const aUrl = document.createElement('a');
         aUrl.className = "lyrics";
         aUrl.href = lyrics;
+        aUrl.target="_blank"
         const nodeA = document.createTextNode("Lyrics");
         aUrl.appendChild(nodeA);
-        
         return aUrl
     });
     section[0].appendChild(addArtistName(date["name"]));
@@ -80,21 +67,20 @@ const addSongs=(date)=>{
         divSong.appendChild(allPindex[i]);
         divSong.appendChild(allPtitle[i]);
         divSong.appendChild(allPlyrics[i]);
-        section[0].appendChild(divSong)   
+        section[0].appendChild(divSong);
     }
 };
-
 const searchArtist=()=>{
     const searchbtn = document.querySelector(".btn-srch");
      const input = document.querySelector(".artist_srch");
     const search = (event) => {
-        event.preventDefault()
+        event.preventDefault();
         changeSection();
         const inputValue = input.value;
         artistRequest(inputValue);     
     };
     searchbtn.addEventListener('click', search); 
-}
+};
 const artistRequest=(aritstName="Sarius")=>{
     const link = "https://genius.p.rapidapi.com/search?q=";
     const url = link + aritstName;
@@ -115,10 +101,8 @@ const artistRequest=(aritstName="Sarius")=>{
            console.log(err);
         });
 };
-
 const main=()=>{
     searchArtist()
-    const dateArtis=artistRequest();
+    artistRequest();
 }
-
 main()
