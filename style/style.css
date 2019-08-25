@@ -178,3 +178,15 @@ footer{
     background-color: #ffffff33;
     color: rgb(110, 110, 110);
 }
+
+@media (max-width: 375px) and (max-height:812px) {
+    .index{
+        font-size: 15px;
+    }
+    .title {
+        font-size: 13px;
+    }
+    .lyrics{
+        font-size: 10px;
+    }
+    }
