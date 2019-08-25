@@ -183,8 +183,7 @@ footer {
 @media (max-width: 375px) and (max-height:812px) {
     h1 {
        font-size: 25px;
-       margin-left: 1vh;
-       margin-right: 1vh;
+        align-self: center;
     }
     .index {
         font-size: 15px;
