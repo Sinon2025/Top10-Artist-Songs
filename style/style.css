@@ -10,20 +10,22 @@
   
 body {
     height: 100vh;
-    /* background-color: rgb(255, 197, 229); */
-    /* background-image: url(../images/background.jpg); */
+     background-color: rgb(255, 197, 229);
+    background-image: url(../images/background6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background: linear-gradient(270deg, #a2ffe7, #b5ffa2, #fff7a2, #a2c2ff, #d0a2ff, #ffa2f9, #ffa2ab, #ffbaa2, #ffbaa2);
+    /* background: rgb(34,95,195);
+    background: linear-gradient(0deg, rgba(34,95,195,1) 0%, rgba(253,45,177,1) 100%); */
+    /* background: linear-gradient(270deg, #a2ffe7, #b5ffa2, #fff7a2, #a2c2ff, #d0a2ff, #ffa2f9, #ffa2ab, #ffbaa2, #ffbaa2);
     background-size: 1800% 1800%;
     
     -webkit-animation: AnimationName 19s ease infinite;
     -moz-animation: AnimationName 19s ease infinite;
-    animation: AnimationName 19s ease infinite;
+    animation: AnimationName 19s ease infinite; */
 }
 
-@-webkit-keyframes AnimationName {
+/* @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -37,7 +39,7 @@ body {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-}
+} */
 
 header {
     margin-top: 5vh;
@@ -56,6 +58,7 @@ h1 {
     display: flex;
     flex-direction: column;
     border-bottom: 3px solid rgba(0, 0, 0, 0.103);
+    border-top: 3px solid rgba(0, 0, 0, 0.103);
 }
 
  .search-box {
@@ -81,7 +84,7 @@ form.artist-search input[type=text] {
     float: right;
     width: 20%;
     padding: 10px;
-    background: rgb(140, 248, 118);
+    background: rgb(152, 255, 132);
     color: rgb(112, 112, 112);
     font-size: 17px;
     border: 1px solid rgba(0, 0, 0, 0.103);
@@ -92,7 +95,7 @@ form.artist-search input[type=text] {
 }
   
 .artist-search button:hover {
-    background: rgb(109, 255, 79);
+    background: rgb(194, 255, 182);
 }
 
 .artist-search::after {
@@ -123,24 +126,25 @@ form.artist-search input[type=text] {
     margin: 2vh;
     padding: 1vh;
     border-radius: 10px;
-    width: 50%;
+    width: 30%;
     height: 10%;
-    background-color: #f8cbed;
+    background-color: #ffffffaf;
     font-family: 'Roboto', sans-serif;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
 }
 
 .index {
     font-size: 20px;
-    color: rgb(253, 103, 128);
+    color: rgb(34, 34, 34);
     align-self: center;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
+    font-weight: 600;
 }
 
 .title {
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
+    font-size: 18px;
+    color: rgb(68, 68, 68);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.253);
     align-self: center;
     text-align: center;
 }
@@ -148,8 +152,8 @@ form.artist-search input[type=text] {
 .lyrics {
     margin-top:0.5vh;
     font-size :15px;
-    color: rgb(122, 252, 252);
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.253);
+    color: rgb(248, 73, 73);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.253);
     align-self: center;
     text-transform: uppercase;
 }
@@ -162,15 +166,15 @@ form.artist-search input[type=text] {
 
 img {
     margin: 2vh auto;
-    width: 40%;
-    border-radius: 10px;
-    border: 4px solid rgba(0, 0, 0, 0.158);
+    width: 30%;
+    border-radius: 20px;
+    border: 6px solid rgba(0, 0, 0, 0.158);
 }
 
 footer {
     margin-top: 2vh;
     width: 100%;
-    height: 4%;
+    height: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
