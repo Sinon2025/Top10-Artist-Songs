@@ -199,4 +199,10 @@ footer {
     .lyrics{
         font-size: 10px;
     }
+    img {
+        width: 60%;
     }
+    .song-box {
+        width: 60%;
+    }
+}
